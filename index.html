@@ -1,13 +1,143 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Calenzy Demo</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        .calendar {
+            border: 1px solid #ccc;
+            padding: 20px;
+            background-color: #f5f5f5;
+            margin-bottom: 20px;
+        }
+
+        .meeting {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+
+        .your-calendar {
+            background-color: #E1F5FE;
+        }
+
+        .participants-calendar {
+            background-color: #FFF3E0;
+        }
+
+        .btn {
+            background-color: #0079BF;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .btn:hover {
+            background-color: #005a8c;
+        }
+
+        form label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: 500;
+            color: #333;
+        }
+
+        form select {
+            font-size: 16px;
+            padding: 8px 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            width: 200px;
+            margin-bottom: 20px;
+        }
+    </style>
 </head>
 <body>
-    <p> this is a test</p>
-    
+    <h1>Calenzy Demo</h1>
+
+    <div class="calendar your-calendar">
+        <h2>Your Calendar</h2>
+        <div class="meeting">
+            <h3>Meeting with Ali</h3>
+            <p>Date: July 10, 2023</p>
+            <p>Time: 2:00 PM - 3:00 PM</p>
+        </div>
+        <div class="meeting">
+            <h3>Team Sync-up</h3>
+            <p>Date: July 12, 2023</p>
+            <p>Time: 9:30 AM - 10:30 AM</p>
+        </div>
+        <!-- Add more random meetings here -->
+        <div class="meeting">
+            <h3>Project Presentation</h3>
+            <p>Date: July 13, 2023</p>
+            <p>Time: 1:00 PM - 2:00 PM</p>
+        </div>
+    </div>
+
+    <div class="calendar participants-calendar">
+        <h2>Mohammad's Calendar</h2>
+        <div class="meeting">
+            <h3>Meeting with Ali</h3>
+            <p>Date: July 10, 2023</p>
+            <p>Time: 2:00 PM - 3:00 PM</p>
+        </div>
+        <div class="meeting">
+            <h3>Team Sync-up</h3>
+            <p>Date: July 12, 2023</p>
+            <p>Time: 9:30 AM - 10:30 AM</p>
+        </div>
+        <div class="meeting">
+            <h3>Client Call</h3>
+            <p>Date: July 13, 2023</p>
+            <p>Time: 3:00 PM - 4:00 PM</p>
+        </div>
+        <!-- Add more random meetings here -->
+        <div class="meeting">
+            <h3>Design Review</h3>
+            <p>Date: July 15, 2023</p>
+            <p>Time: 10:00 AM - 11:00 AM</p>
+        </div>
+    </div>
+
+    <h2>Schedule a Meeting</h2>
+    <form id="meetingForm">
+        <label for="participant">Participant:</label>
+        <select id="participant" name="participant">
+            <option value="ali">Ali (Product Owner)</option>
+            <option value="saeed">Saeed (Project Manager)</option>
+            <option value="arash">Arash (Developer)</option>
+            <!-- Add more options for participants with different roles -->
+        </select>
+
+        <label for="suggestedTime">Suggested Meeting Time:</label>
+        <select id="suggestedTime" name="suggestedTime">
+            <option value="10:00 AM - 11:00 AM">10:00 AM - 11:00 AM</option>
+            <option value="2:00 PM - 3:00 PM">2:00 PM - 3:00 PM</option>
+            <option value="4:00 PM - 5:00 PM">4:00 PM - 5:00 PM</option>
+            <!-- Add more suggested meeting time options -->
+        </select>
+
+        <button class="btn" type="submit">Schedule Meeting</button>
+    </form>
+
+    <script>
+        // Add JavaScript functionality here if needed
+    </script>
 </body>
 </html>
